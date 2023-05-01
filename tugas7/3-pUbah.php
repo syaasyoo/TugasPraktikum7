@@ -83,7 +83,7 @@ if ( isset($_POST["submit"])){
           </select>
         </div>
         <div class="mb-2">
-          <label for="nama" class="form-label">Nama</label>
+          <label for="nama" class="form-label">Employee Name</label>
           <input class="form-control" type="text" name="nama" id="nama" required value = "<?= $ganti["nama"]?>" autocomplete ="off">  
         </div>
         <div class="mb-2">
@@ -91,11 +91,11 @@ if ( isset($_POST["submit"])){
           <input class="form-control" type="email" name="email" id="email" required value = "<?= $ganti["email"]?>" autocomplete ="off">  
         </div>
         <div class="mb-2">
-          <label for="no_hp" class="form-label">Nomor Telepon</label>
+          <label for="no_hp" class="form-label">Phone Number</label>
           <input class="form-control" type="text" name="no_hp" id="no_hp" required value = "<?= $ganti["no_hp"]?>" autocomplete ="off">  
         </div>
         <div class="mb-2">
-          <label for="hire_date" class="form-label">Tanggal Masuk</label>
+          <label for="hire_date" class="form-label">Hire Date</label>
           <input class="form-control" type="date" name="hire_date" id="hire_date" required value = "<?= $ganti["hire_date"]?>" autocomplete ="off">  
         </div>
         <div class="d-flex justify-content-center mb-3">

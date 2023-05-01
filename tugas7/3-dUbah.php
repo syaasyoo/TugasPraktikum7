@@ -61,8 +61,12 @@ if ( isset($_POST["submit"])){
       <form action="" method ="post" enctype="multipart/form-data" class="row g-3">
         <input type="hidden" name="id_department" value="<?= $ganti["id_department"]?>">
         <div class="mb-2">
-          <label for="department_name" class="form-label">Nama department</label>
+          <label for="department_name" class="form-label">Department Name</label>
           <input class="form-control" type="text" name="department_name" id="department_name" required value = "<?= $ganti["department_name"]?>" autocomplete ="off">  
+        </div>
+        <div class="mb-2">
+          <label for="department_loc" class="form-label">Department Location</label>
+          <input class="form-control" type="text" name="department_loc" id="department_loc" required value = "<?= $ganti["department_name"]?>" autocomplete ="off">  
         </div>
         <div class="d-flex justify-content-center mb-3">
           <button type="submit" name="submit" class="btn btn-secondary" style="background-color: #393646">Simpan Perubahan</button>

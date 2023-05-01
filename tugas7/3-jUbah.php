@@ -51,7 +51,7 @@ if ( isset($_POST["submit"])){
       <form action="" method ="post" enctype="multipart/form-data" class="row g-3">
         <input type="hidden" name="id_job" value="<?= $ganti["id_job"]?>">
         <div class="mb-2">
-          <label for="job_title" class="form-label">Nama job</label>
+          <label for="job_title" class="form-label">Job Name</label>
           <input class="form-control" type="text" name="job_title" id="job_title" required value = "<?= $ganti["job_title"]?>" autocomplete ="off">  
         </div>
         <div class="d-flex justify-content-center mb-3">
