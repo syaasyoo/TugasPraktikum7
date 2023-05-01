@@ -1,5 +1,5 @@
 <?php
-//koneksi ke database ============================================================================
+//cek koneksi ke database ============================================================================
 $conn = mysqli_connect("localhost","root","","myEmployee");
 //umum ===========================================================================================
 function query ($query){
@@ -25,13 +25,13 @@ function tambahemployee ($data) {
 }
 function hapusemployee ($id){
     global $conn;
-    $query = "DELETE FROM employee WHERE idemployeee = $id";
+    $query = "DELETE FROM employee WHERE id_employee = $id";
     mysqli_query($conn,$query);
     return mysqli_affected_rows($conn);
 }
 function ubahemployee($data){
     global $conn;
-    $id_employee = htmlspecialchars($data["idemployeee"]);
+    $id_employee = htmlspecialchars($data["id_employee"]);
     $nama = htmlspecialchars($data["nama"]);
     $email = htmlspecialchars($data["email"]);
     $no_hp = htmlspecialchars($data["no_hp"]);
@@ -39,7 +39,7 @@ function ubahemployee($data){
     $id_department = htmlspecialchars($data["id_department"]);
     $id_job = htmlspecialchars($data["id_job"]);
     $query = "UPDATE employee SET nama = '$nama', email ='$email', no_hp = '$no_hp', hire_date = '$hire_date',
-                id_department = '$id_department', id_job = '$id_job' WHERE id_employee = $idemployeee";
+                id_department = '$id_department', id_job = '$id_job' WHERE id_employee = $id_employee";
     mysqli_query($conn,$query);
     return mysqli_affected_rows($conn);
 }
@@ -47,7 +47,8 @@ function ubahemployee($data){
 function tambahdepartment ($data) {
     global $conn;
     $department_name = htmlspecialchars($data["department_name"]);
-    $query = "INSERT INTO department VALUES ('','$department_name')";
+    $department_loc = htmlspecialchars($data["department_loc"]);
+    $query = "INSERT INTO department VALUES ('','$department_name', '$department_loc')";
     mysqli_query($conn,$query);
     return mysqli_affected_rows($conn);
 }
@@ -55,7 +56,8 @@ function ubahdepartment($data){
     global $conn;
     $id_department = htmlspecialchars($data["id_department"]);
     $department_name = htmlspecialchars($data["department_name"]);
-    $query = "UPDATE department SET department_name = '$department_name' WHERE id_department = $id_department";
+    $department_loc = htmlspecialchars($data["department_loc"]);
+    $query = "UPDATE department SET department_name = '$department_name', department_loc = '$department_loc' WHERE id_department = $id_department";
     mysqli_query($conn,$query);
     return mysqli_affected_rows($conn);
 }
