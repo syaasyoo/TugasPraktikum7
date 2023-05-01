@@ -66,7 +66,7 @@ if ( isset($_POST["submit"])){
         </div>
         <div class="mb-2">
           <label for="department_loc" class="form-label">Department Location</label>
-          <input class="form-control" type="text" name="department_loc" id="department_loc" required value = "<?= $ganti["department_name"]?>" autocomplete ="off">  
+          <input class="form-control" type="text" name="department_loc" id="department_loc" required value = "<?= $ganti["department_loc"]?>" autocomplete ="off">  
         </div>
         <div class="d-flex justify-content-center mb-3">
           <button type="submit" name="submit" class="btn btn-secondary" style="background-color: #393646">Simpan Perubahan</button>
